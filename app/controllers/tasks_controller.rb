@@ -22,6 +22,7 @@ class TasksController < ApplicationController
   # POST /tasks or /tasks.json
   def create
     @task = Task.new(task_params)
+    # @task.project_id = @project.id
 
     respond_to do |format|
       if @task.save
@@ -64,6 +65,6 @@ class TasksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:description)
+      params.require(:task).permit(:description, :project_id)
     end
 end

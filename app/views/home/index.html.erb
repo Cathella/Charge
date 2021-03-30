@@ -4,5 +4,7 @@
   I want to manage my tasks and projects more effectively.<br>
 </p>
 <div>
-  <%= link_to 'Create a project', new_project_path %>
+  <% if user_signed_in? %>
+    <%= link_to 'Create a project', new_project_path %>
+  <% end %>
 </div>

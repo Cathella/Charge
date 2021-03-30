@@ -1,16 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Back to projects', projects_path %>
+
 <div>
   <p>
     <%= @project.title %>
   </p>
-  <br>
-
   <p>
     <%= @project.description %>
   </p>
-  <br>
+  <%= link_to 'Edit project', edit_project_path(@project) %>
 </div>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<div>
+  <% if current_user %>
+    <%= link_to 'Add task', new_task_path %>
+  <% end %>
+</div>
