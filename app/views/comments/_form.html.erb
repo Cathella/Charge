@@ -19,6 +19,11 @@
     <%= form.text_area :body %>
   </div>
 
+  <div class="field">
+    <%= form.label :file, 'Attach files' %>
+    <%= form.file_field :file %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
