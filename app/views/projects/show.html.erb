@@ -19,7 +19,7 @@
   <ul>
   <% @tasks.each do |task| %>
     <li>
-      <%= task.description %>
+      <%= link_to task.description, task %>
     </li>
   <% end %>
   </ul>

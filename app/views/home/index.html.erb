@@ -3,8 +3,13 @@
   This is a simple tool that helps me control my task flow.<br>
   I want to manage my tasks and projects more effectively.<br>
 </p>
+
+<% if user_signed_in? %>
 <div>
-  <% if user_signed_in? %>
-    <%= link_to 'Create a project', new_project_path %>
+  <% @projects.each do |project| %>
+    <p><%= link_to project.title, project %></p>
   <% end %>
+  
+  <%= link_to 'Create new project', new_project_path %>
 </div>
+<% end %>

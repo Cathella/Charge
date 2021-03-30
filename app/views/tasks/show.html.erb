@@ -15,7 +15,7 @@
   <ul>
   <% @comments.each do |comment| %>
     <li>
-      <%= comment.body %>
+      <%= link_to comment.body, comment %>
     </li>
   <% end %>
   </ul>

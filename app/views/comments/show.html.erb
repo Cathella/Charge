@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<h3>Project: <%= @comment.task.project.title %></h3>
+<h4>Task: <%= @comment.task.description %></h4>
 <p>
-  <strong>Body:</strong>
+  <strong>Comment: </strong>
   <%= @comment.body %>
 </p>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to 'Edit', edit_comment_path(@comment) %> | 
+<%= link_to 'Delete', @comment, method: :delete, data: { confirm: 'Are you sure?' } %>
