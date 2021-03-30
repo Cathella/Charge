@@ -10,9 +10,8 @@
     <% @projects.each do |project| %>
 
       <tr>
-        <td><%= link_to project.title.upcase, project %></td>
-        <td><%= link_to 'Edit Project', edit_project_path(project) %></td>
-        <td><%= link_to 'Delete Project', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to project.title, project %></td>
+        <!-- <td><%= link_to 'Edit Project', edit_project_path(project) %></td> -->
       </tr>
     <% end %>
   </tbody>
