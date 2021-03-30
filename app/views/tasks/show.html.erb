@@ -11,5 +11,16 @@
 <%= link_to 'Edit task', edit_task_path(@task) %>
 
 <div>
-  <%= link_to 'Add comment' %>
+  <h3>Comments for this task</h3>
+  <ul>
+  <% @comments.each do |comment| %>
+    <li>
+      <%= comment.body %>
+    </li>
+  <% end %>
+  </ul>
+  <%= link_to 'Add comment', new_comment_path %>
+</div>
+
+<div>
 </div>
