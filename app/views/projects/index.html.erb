@@ -1,13 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="text-center mt-4 border-bottom pb-4">My <span class="text-muted">Projects</span></h1>
+<h1 class="text-center mt-4 border-bottom pb-4 mb-5">My <span class="text-muted">Projects</span></h1>
 
-<%= link_to 'Create Project', new_project_path %>
+<div class="text-center">
+  <div>
+    <%= link_to '<i class="fas fa-plus text-primary"></i>'.html_safe, new_project_path, class: 'border py-2 px-3 rounded text-muted' %>
+  </div>
+  <div class="mt-4">
+    <%= link_to 'New Project', new_project_path, class: 'text-muted' %>
+  </div>
+</div>
 
-<div>
+<div class="bg-light mt-4 mx-auto w-50 rounded py-4 px-5">
 <% @projects.each do |project| %>
-  <%= link_to project.title, project %>
-  <!-- <td><%= link_to 'Edit Project', edit_project_path(project) %></td> -->
+  <%= link_to project.title, project, class: 'font-weight-bold' %>
 <% end %>
 </div>
 
