@@ -1,8 +1,10 @@
-<div>
+<nav class="py-4 d-flex justify-content-end">
 <% if current_user %>
-  <p>Hello, <%= current_user.email %></p>
+  <p class="mr-3 text-muted">Hello, <%= current_user.email %></p>
   <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 <% else %>
-  <%= link_to 'Create an account', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+  <%= link_to 'New account?', new_user_registration_path, class: 'mr-2' %>
+  <span class="mr-2">or</span>
+  <%= link_to 'Sign in', new_user_session_path %>
 <% end %>
-</div>
+</nav>

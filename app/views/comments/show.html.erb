@@ -2,6 +2,7 @@
 
 <h3>Project: <%= @comment.task.project.title %></h3>
 <h4>Task: <%= @comment.task.description %></h4>
+<%= link_to 'Back to tasks', tasks_path %>
 <p>
   <strong>Comment: </strong>
   <%= @comment.body %>

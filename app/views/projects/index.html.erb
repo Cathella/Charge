@@ -1,22 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>My Projects</h1>
-
-<table>
-  <thead>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-
-      <tr>
-        <td><%= link_to project.title, project %></td>
-        <!-- <td><%= link_to 'Edit Project', edit_project_path(project) %></td> -->
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<h1 class="text-center mt-4 border-bottom pb-4">My <span class="text-muted">Projects</span></h1>
 
 <%= link_to 'Create Project', new_project_path %>
+
+<div>
+<% @projects.each do |project| %>
+  <%= link_to project.title, project %>
+  <!-- <td><%= link_to 'Edit Project', edit_project_path(project) %></td> -->
+<% end %>
+</div>
+
