@@ -13,7 +13,9 @@
 
 <div class="bg-light mt-4 mx-auto w-50 rounded py-4 px-5">
 <% @projects.each do |project| %>
-  <%= link_to project.title, project, class: 'font-weight-bold' %>
+  <span class="d-block border-bottom py-3 pl-2">
+  <i class="fas fa-arrow-circle-right mr-3 text-muted"></i><%= link_to project.title, project, class: 'font-weight-bold' %>
+  </span>
 <% end %>
 </div>
 

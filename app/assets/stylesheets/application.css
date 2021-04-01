@@ -10,3 +10,11 @@ p {
   font-weight: 400;
   line-height: 1.8;
 }
+
+.big-font {
+  font-size: 1.6em;
+}
+
+.field-height {
+  height: 3em !important;
+}
