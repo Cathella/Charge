@@ -1,0 +1,19 @@
+<h1 class="font-weight-bold text-muted mb-4 mt-5 text-center border-bottom pb-4">Charge</h1>
+<p class="text-muted w-50 mx-auto text-center">
+  This is a simple tool that helps me control my task flow.
+  I want to manage my tasks and projects more effectively.
+</p>
+
+<% if user_signed_in? %>
+<div class="mt-5 text-center">
+  <div>
+    <%= link_to '<i class="fas fa-plus text-primary"></i>'.html_safe, new_project_path, class: 'border py-2 px-3 rounded text-muted' %>
+  </div>
+  <div class="mt-4">
+    <%= link_to 'New Project', new_project_path, class: 'text-muted' %>
+  </div>
+  <div class="mt-5">
+    <%= link_to 'Go to my projects<i class="fas fa-arrow-right ml-3"></i>'.html_safe, projects_path, class: 'alert alert-primary font-weight-bold' %>
+  </div>
+</div>
+<% end %>

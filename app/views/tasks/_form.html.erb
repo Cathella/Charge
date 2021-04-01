@@ -1,0 +1,35 @@
+<%= form_with(model: task, local: true) do |form| %>
+  <% if task.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-lg-4">
+      <%= link_to '<i class="fas fa-arrow-left mr-3"></i>Back to projects'.html_safe, projects_path, class: 'text-muted' %>
+      <div class="field mt-5 pt-4">
+        <%= form.label :project_id, 'Select a project', class: 'big-font font-weight-bold mb-3' %>
+        <%= form.collection_select(:project_id, Project.all, :id, :title, {}, class: 'custom-select field-height') %>
+      </div>
+    </div>
+
+    <div class="col-lg-8">
+      <div class="w-75 mx-auto">
+        <%= link_to '<i class="fas fa-arrow-left mr-3"></i>Back to tasks'.html_safe, tasks_path, class: 'text-muted' %>
+        <h3 class="mt-5 py-3">New <span class="text-muted">Task</span></h3>
+        <div class="field mb-3">
+          <%= form.text_area :description, class: 'form-control', placeholder: 'Description' %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit 'Add task', class: 'btn btn-primary'%>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

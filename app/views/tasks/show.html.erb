@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to '<i class="fas fa-arrow-left mr-3"></i>Back to tasks'.html_safe, tasks_path, class: 'text-muted' %>
+
+<div class="row">
+  <div class="col-lg-4">
+    <h3 class="mt-5">
+      Task: <br>
+      <span class="text-muted">
+        <%= @task.description %>
+      </span>
+    </h3>
+    <h5 class="my-5">
+      Project: <br>
+      <span class="text-muted">
+        <%= @task.project.title %>
+      </span>
+    </h5>
+
+    <%= link_to '<i class="fas fa-pencil-alt mr-2"></i>Edit task'.html_safe, edit_task_path(@task), class: 'mr-4 font-weight-bold'%>
+  </div>
+
+  <div class="col-lg-8">
+    <div class="bg-light py-4 px-5">
+      <h4 class="text-muted border-bottom py-4 mb-4 text-center">Comments for this task</h4>
+      <div class="text-center pt-3">
+        <%= link_to '<i class="fas fa-plus mr-2"></i>New comment'.html_safe, new_comment_path, class: 'border py-2 px-3 rounded' %>
+      </div>
+      <div class="mt-5 w-75 mx-auto">
+        <% @comments.each do |comment| %>
+          <span class="d-block">
+            > <%= link_to comment.body, comment %>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
