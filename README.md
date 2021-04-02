@@ -6,7 +6,7 @@ A ruby-garage take home example task
 I'm passionate about productivity. I want to manage my tasks and projects more effectively. I need a simple tool that helps me control my task flow.
 
 ## Project live demo
-[Live demo](https://homeschool.ug)
+[Live demo](https://safe-citadel-31150.herokuapp.com/)
 
 ## Functional Requirements:
 
