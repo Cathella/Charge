@@ -5,6 +5,9 @@ A ruby-garage take home example task
 
 I'm passionate about productivity. I want to manage my tasks and projects more effectively. I need a simple tool that helps me control my task flow.
 
+## Project live demo
+[Live demo](https://homeschool.ug)
+
 ## Functional Requirements:
 
 - I want to be able to sign in/sign up by email/password or Facebook;
@@ -28,14 +31,22 @@ I'm passionate about productivity. I want to manage my tasks and projects more e
 - It should have a user authentication solution. The user should only have access to his/her own projects and tasks (Devise, Cancancan);
 - It should have automated tests for all functionality (models - RSpec, controllers - RSpec, acceptance/functional tests - RSpec + Capybara);
 
-## Application Specs
+## How to run this project
 
-* Ruby version
-* System dependencies
-* Configuration
-* Database creation
-* Database initialization
-* How to run the test suite
-* Services (job queues, cache servers, search engines, etc.)
-* Deployment instructions
+- Install Ruby.
+- Install Ruby on Rails.
+- Install bundle.
+- Run "bundle install" inside the project  folder.
+- Run "rails server" inside the project folder.
+- Go to "https://localhost:3000/"
 
+## Author
+
+**Nakitto Catherine**
+- Linkedin: [Nakitto Catherine](https://www.linkedin.com/in/nakitto-catherine2020)
+- Github: [@Cathella](https://github.com/Cathella)
+- Twitter: [@cathella9](https://twitter.com/cathella9)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
