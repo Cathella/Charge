@@ -8,7 +8,8 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1 or /projects/1.json
   def show
-    @tasks = @project.tasks.all
+    set_project
+    @tasks = @project.tasks.order(created_at: "DESC")
   end
 
   # GET /projects/new

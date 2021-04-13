@@ -28,19 +28,25 @@
       <% if current_user %>
         <div>
           <h4 class="text-muted border-bottom py-4 mb-4 text-center">Tasks for this project</h4>
-          <div class="text-center pt-3">
-            <%= link_to '<i class="fas fa-plus mr-2"></i>New task'.html_safe, new_task_path, class: 'border py-2 px-3 rounded' %>
-          </div>
+          
           <div class="mt-5 w-75 mx-auto">
             <% @tasks.each do |task| %>
               <div class="d-flex my-3">
                 <%= form_tag('', method: '', class: 'mt-1') do %>
                   <%= check_box_tag(:complete) %>
-                <% end %>
+                <% end %> 
+                <span class="ml-2"><%= task.description %><span>
+              </div>
+            <% end %>
+          </div>
 
-                <span class="ml-3">
-                  <%= link_to task.description.capitalize, task, class: 'font-weight-bold' %>
-                </span>
+          <div>
+            <%= form_for([@project, @project.tasks.build]) do |form| %>
+              <div class="field mb-4">
+                <%= form.text_area :description, class: 'form-control', placeholder: 'Enter new task', style: 'height: 5.5em'%>
+              </div>
+              <div class="actions">
+                <%= form.submit 'Add', class: 'btn btn-primary py-3 px-5 rounded-0' %>
               </div>
             <% end %>
           </div>
